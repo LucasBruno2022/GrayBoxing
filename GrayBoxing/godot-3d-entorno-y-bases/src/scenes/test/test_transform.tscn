@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b0bcy5pv0qjnp"]
+
+[ext_resource type="Script" uid="uid://dqfv1syv6wtrb" path="res://src/scenes/test/test_transform.gd" id="1_mucqp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_om6dw"]
+albedo_color = Color(0.067590795, 0.47439247, 0.105138116, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_htt5a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcjl3"]
+albedo_color = Color(0.62352943, 0.39607844, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_njxag"]
+size = Vector3(1.5, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4cbaf"]
+albedo_color = Color(0.5694482, 0.0047654496, 0.31402677, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0fqjd"]
+size = Vector3(0.2, 0.2, 1.5)
+
+[node name="TestTransform" type="Node3D" unique_id=411449994]
+script = ExtResource("1_mucqp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1155948704]
+material_override = SubResource("StandardMaterial3D_om6dw")
+mesh = SubResource("BoxMesh_htt5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=829295658]
+material_override = SubResource("StandardMaterial3D_bcjl3")
+mesh = SubResource("BoxMesh_njxag")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=642242665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.3)
+material_override = SubResource("StandardMaterial3D_4cbaf")
+mesh = SubResource("BoxMesh_0fqjd")

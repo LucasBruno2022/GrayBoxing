@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dohkwjoswcvqk"]
+
+[ext_resource type="Script" uid="uid://dpltgoawid6ma" path="res://escenario_grayboxin/jugador.gd" id="1_16k11"]
+[ext_resource type="PackedScene" uid="uid://63tueo5avqt" path="res://src/scenes/player/player_camera.tscn" id="2_omvyu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_si781"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u5bk5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u5bk5"]
+
+[node name="jugador" type="CharacterBody3D" unique_id=238035540 node_paths=PackedStringArray("camara")]
+script = ExtResource("1_16k11")
+camara = NodePath("PlayerCamera")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=383167664]
+shape = SubResource("BoxShape3D_si781")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=530055822]
+mesh = SubResource("CapsuleMesh_u5bk5")
+
+[node name="IndicadorZ" type="MeshInstance3D" parent="." unique_id=825742036]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, -4)
+mesh = SubResource("BoxMesh_u5bk5")
+
+[node name="PlayerCamera" parent="." unique_id=451666427 instance=ExtResource("2_omvyu")]

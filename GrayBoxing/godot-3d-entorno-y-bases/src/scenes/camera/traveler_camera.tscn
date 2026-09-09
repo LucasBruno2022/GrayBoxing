@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b8e5ssoiu0t2v"]
+
+[ext_resource type="Script" uid="uid://sw7wffb87ldi" path="res://src/scenes/camera/traveler_camera.gd" id="1_yvjjc"]
+
+[node name="TravelerCamera" type="Camera3D" unique_id=1377707119]
+script = ExtResource("1_yvjjc")

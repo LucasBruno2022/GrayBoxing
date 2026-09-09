@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bxth1lkq6ofad"]
+
+[ext_resource type="Texture2D" uid="uid://na4lpiyjcbvy" path="res://assets/models/Tree3.png" id="1_2qauu"]
+[ext_resource type="Script" uid="uid://bfxk15eev7cg1" path="res://src/scenes/props/tree_look_at.gd" id="2_fy4n3"]
+
+[node name="TreeLookAt" type="Sprite3D" unique_id=754614012]
+texture = ExtResource("1_2qauu")
+script = ExtResource("2_fy4n3")
